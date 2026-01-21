@@ -678,7 +678,7 @@ color: white !important;;
 }
 
 
-/* Hero container */
+/* Hero container AWARDS */
 .hero-awards {
   position: relative;
   width: 100%;
@@ -728,6 +728,60 @@ color: white !important;;
   line-height: 1.6;
   max-width: 800px;
 }
+
+.awards-gallery {
+  width: 100%;
+  padding: 4rem 1.5rem;
+}
+
+.awards-gallery-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Individual items */
+.award-item {
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000;
+}
+
+.award-item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect (desktop) */
+@media (hover: hover) {
+  .award-item:hover img {
+    transform: scale(1.08);
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .awards-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .awards-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 
 /* Mobile */
 @media (max-width: 480px) {
@@ -792,4 +846,227 @@ color: white !important;;
   .hero-media {
     height: 75vh;
   }
+}
+
+
+/* media */
+
+.media-videos {
+  padding: 4rem 1.5rem;
+}
+
+.media-videos-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.video-card {
+  text-decoration: none;
+  color: #000;
+}
+
+.video-thumb {
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.video-thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play icon overlay */
+.video-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    url("https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg")
+    center / 60px no-repeat;
+}
+
+/* Text */
+.video-card p {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Hover */
+@media (hover: hover) {
+  .video-card:hover .video-thumb {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .media-videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .media-videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* MEDIA ARTICLES */
+.media-pdfs {
+  padding: 4rem 1.5rem;
+ 
+}
+
+
+.media-pdfs-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+ margin-left: 3rem;
+}
+
+.media-pdfs-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #e5e5e5;
+}
+
+.pdf-card {
+  padding: 2rem;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.pdf-card:last-child {
+  border-right: none;
+}
+
+.pdf-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.pdf-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #ff3b00;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .media-pdfs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pdf-card:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .media-pdfs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-card {
+    border-right: none;
+  }
+
+.media-pdfs-title{
+
+ font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  margin-left: 5rem !important;
+}
+
+}
+
+        /* MEDIA EVENTS */
+
+        .events-gallery {
+  padding: 4rem 1.5rem;
+  background: #0b2a3a; /* dark blue like your screenshot */
+}
+
+.events-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  margin-left: 3rem;
+}
+
+/* Grid */
+.events-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Card */
+.event-item {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Image */
+.event-item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover */
+@media (hover: hover) {
+  .event-item:hover img {
+    transform: scale(1.05);
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .events-title{
+    margin-left: 5rem;
+  }
+
 }
