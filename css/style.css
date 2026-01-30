@@ -1070,3 +1070,98 @@ color: white !important;;
   }
 
 }
+
+
+.multi-day {
+  display: flex;
+  flex-direction: column;
+}
+
+.day-links {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.day-links a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff3b00;
+  text-decoration: none;
+}
+
+.day-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* Lightbox Background */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+
+  z-index: 9999;
+}
+
+/* Active */
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Image */
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  animation: zoomIn 0.3s ease;
+}
+
+/* Close Button (Right Side) */
+.lightbox-close {
+  position: fixed;
+  top: 25px;
+  right: 30px;
+
+  font-size: 38px;
+  color: #fff;
+  cursor: pointer;
+
+  background: rgba(0,0,0,0.6);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Zoom Effect */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+

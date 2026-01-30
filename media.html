@@ -31,6 +31,56 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+      /* LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.lightbox.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Close Button */
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.lightbox-close:hover {
+  color: #ff3b00;
+}
+    </style>
 </head>
 
 <body>
@@ -44,10 +94,10 @@
     <!-- Spinner End -->
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
-        <a class="navbar-brand d-flex text-primary align-items-center" href="#">
-            <img src="./img/logo.png" class="img-fluid mx-2" width="50" style="object-fit: scale-down;" alt="logo">
+         <a class="navbar-brand d-flex text-primary align-items-center" href="#">
+            <img src="./img/logooo.png" class="img-fluid mx-2" width="50" style="object-fit: scale-down;" alt="logo">
             <h2 class=" text-primary hiding-inmobile "
-                style="color:rgb(251, 249, 247) !important;  background-color:rgb(10,40,57) ;   font-size: 34px;padding: 15px;">
+                style="color:rgb(10,40,57) !important;  font-size: 34px;padding: 15px;">
                 Pan India
                 Logistics</h2>
 
@@ -153,6 +203,46 @@
   </p>
 </a>
 
+
+
+<!-- VIDEO 6 (updated thumbnail) -->
+<a
+  href="https://youtu.be/_moBY60PRwA?si=QbsDbhLLtuas6xAr"
+  target="_blank"
+  class="video-card"
+>
+  <div class="video-thumb">
+    <img
+      src="img/Media/power.png"
+      alt="Smart Driver Awards Jury (S3)"
+    >
+  </div>
+  <p>
+    <strong>Smart Driver Awards Jury (S3)</strong><br>
+    Jury participation & evaluation
+  </p>
+</a>
+
+<!-- Eicher Event (Day 1 & Day 2) -->
+<div class="video-card multi-day">
+
+  <div class="video-thumb">
+    <img src="./img/Media/day1.png" alt="Eicher Event">
+  </div>
+
+  <p>
+    <strong>Eicher’s Women Delegation</strong><br>
+    Event Coverage
+  </p>
+
+  <div class="day-links">
+    <a href="https://youtu.be/qlq-Sux_qI0?si=9e0yPaLas9BLmPU-" target="_blank">Day 1</a>
+    <a href="https://youtu.be/JgVqURx6fUA?si=na-EwWOUK2X2Mptx" target="_blank">Day 2</a>
+  </div>
+
+</div>
+
+
   </div>
 </section>
 
@@ -184,7 +274,7 @@
       <p class="pdf-text">
         <strong>Motorindia</strong> – May 2025 –  
         Expanding Capabilities with Strategic Innovation & Operational Excellence –  
-        <b>Iccha Gupta</b>
+        <b>Mr. K K Gupta</b>
       </p>
       <a
         href="img/Media/Motorindia Magazine PIL.pdf"
@@ -199,7 +289,7 @@
     <div class="pdf-card">
       <p class="pdf-text">
         <strong>Drivers Duniya</strong> – Dec 2025 – Feb 2026 –  
-        Deliver not shipments, but peace of mind –  
+        Delivering not just shipments, but peace of mind –  
         <b>Iccha Gupta</b>
       </p>
       <a
@@ -239,13 +329,63 @@
     <div class="event-item">
       <img src="img/Media/SDA BY CDRM.jpeg" alt="Event 5">
     </div>
+
+    <div class="event-item">
+      <img src="img/Media/aitwa women wing.jpeg" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/AshokLeyland1.jpeg" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/cummins transporter meet.jpeg" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/cummin.JPG" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/Cummins Panel Discussion.JPG" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/Cummins Women in Transport .jpg" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/Cummins Transporter meet .jpg" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/cvf1.jpeg" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/cvf2.jpeg" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/cvf3.jpeg" alt="Event 5">
+    </div>
+
+    <div class="event-item">
+      <img src="img/Media/Eicher1.JPG" alt="Event 5">
+    </div>
+ <div class="event-item">
+      <img src="img/Media/Eicher2.JPG" alt="Event 5">
+    </div>
+
   </div>
 </section>
 
 
-
-
-
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" id="lightboxImg">
+</div>
 
     <!-- Footer Start -->
     <footer class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s"
@@ -338,8 +478,43 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
- 
 
+    <script>
+const images = document.querySelectorAll('.event-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const closeBtn = document.querySelector('.lightbox-close');
+
+// Open Lightbox
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.classList.add('show');
+    lightboxImg.src = img.src;
+  });
+});
+
+// Close Button
+closeBtn.addEventListener('click', () => {
+  lightbox.classList.remove('show');
+});
+
+// Click Outside Image = Close
+lightbox.addEventListener('click', (e) => {
+  if (e.target !== lightboxImg) {
+    lightbox.classList.remove('show');
+  }
+});
+
+// ESC Key Close
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    lightbox.classList.remove('show');
+  }
+});
+</script>
+ 
 </body>
+
+
 
 </html>

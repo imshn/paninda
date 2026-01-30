@@ -44,10 +44,10 @@
     <!-- Spinner End -->
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
-        <a class="navbar-brand d-flex text-primary align-items-center" href="#">
-            <img src="./img/logo.png" class="img-fluid mx-2" width="50" style="object-fit: scale-down;" alt="logo">
+         <a class="navbar-brand d-flex text-primary align-items-center" href="#">
+            <img src="./img/logooo.png" class="img-fluid mx-2" width="50" style="object-fit: scale-down;" alt="logo">
             <h2 class=" text-primary hiding-inmobile "
-                style="color:rgb(251, 249, 247) !important;  background-color:rgb(10,40,57) ;   font-size: 34px;padding: 15px;">
+                style="color:rgb(10,40,57) !important;  font-size: 34px;padding: 15px;">
                 Pan India
                 Logistics</h2>
 
@@ -81,7 +81,7 @@
 
                 <section class="hero-awards">
   <img
-    src="img/hero-award.jpg"
+    src="img/Untitled design (2).png"
     alt="Awards Banner"
     class="hero-awards-img"
   />
@@ -112,7 +112,7 @@
     <div class="award-item">
       <img src="img/Awards/WhatsApp Image 2025-08-17 at 22.15.41_53aa8319.jpg" alt="Corporate Logistics Award" />
     </div>
-    <div class="award-item">
+    <div class="award-item" >
       <img src="img/Awards/WhatsApp Image 2025-08-17 at 22.15.42_b7229a12.jpg" alt="Global Logistics Excellence" />
     </div>
     <div class="award-item">
@@ -126,7 +126,11 @@
 
 
 
-
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <img id="lightboxImg" />
+</div>
 
 
 
@@ -224,7 +228,33 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
- 
+
+
+ <script>
+  const images = document.querySelectorAll(".award-item img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const closeBtn = document.getElementById("lightboxClose");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightboxImg.src = img.src;
+    });
+  });
+
+  // Close with button
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+
+  // Close when clicking outside image
+  lightbox.addEventListener("click", e => {
+    if (e.target !== lightboxImg) {
+      lightbox.classList.remove("active");
+    }
+  });
+</script>
 
 </body>
 
